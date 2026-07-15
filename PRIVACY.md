@@ -1,48 +1,29 @@
-### Privacy policy ###
+# Lumen TV Browser Privacy Policy
 
-**Last updated:** March 28, 2026
+Effective: July 15, 2026
 
-This policy describes how **TV Bro** (“the application”) handles information. The application is open-source software. The primary author is **Fedir Tsapana**. Development may also involve a **changing set of voluntary contributors**; you can see the current list on the [GitHub contributors page](https://github.com/truefedex/tv-bro/graphs/contributors).
+Lumen TV Browser is an open-source Android TV browser maintained at [yuebanddd/lumen-tv-browser](https://github.com/yuebanddd/lumen-tv-browser). It is derived from [TV Bro](https://github.com/truefedex/tv-bro).
 
----
+## Data handled by the app
 
-#### Information the application collects ####
+Lumen TV Browser does not include a Lumen account system, advertising SDK, or first-party analytics SDK. The app does not send browsing history, bookmarks, or downloaded-file records to a Lumen-operated server.
 
-The current version of the application **does not collect personal data** and **does not transmit analytics or usage data** from your device to us or to third-party analytics services as part of the app’s own behavior.
+Browser data such as history, bookmarks, tabs, preferences, cookies, cache, and site storage is kept on the TV by the application or its selected web engine. Incognito mode avoids saving browsing history and clears its session data when the incognito process exits, but downloads and bookmarks explicitly created by the user remain.
 
-#### Earlier versions ####
+## Network requests
 
-**Older releases** of the application may have included **Firebase Crashlytics** (or similar crash-reporting tooling) that could send **crash diagnostics** to Google’s infrastructure. Those reports, when enabled, were handled under Google’s terms and privacy practices applicable at the time. If you use an old build, consult that build’s documentation or source to confirm what was included.
+Websites opened by the user receive normal browser requests and may collect data under their own policies. Search terms are sent to the search provider selected in Settings. When ad blocking is enabled, the app may download the configured filter list; the default source is EasyList.
 
-#### Websites you visit ####
+Android System WebView and optional GeckoView are separately maintained rendering engines. Their behavior and any system-level diagnostics are governed by their respective providers and device settings.
 
-TV Bro is a **web browser**. When you browse the internet:
+## Permissions
 
-- **Websites, networks, and services you use** may collect, store, and process data according to **their own** privacy policies and practices.
-- **Your device, ISP, DNS provider, and other intermediaries** may see network activity when you load pages or use online services.
-- **Using the web can be risky.** You may expose passwords, payment details, location, or other sensitive information if you enter them on untrusted sites or over insecure connections.
+The app may request microphone access for voice search, storage or media access for downloads and uploads, camera or location access when a website requests those capabilities, notifications for active downloads, and package-install permission when the user chooses to open an APK. Website permissions are presented to the user where Android and the selected engine support prompting.
 
-You are responsible for choosing which sites you trust and what information you share online.
+## User control
 
-#### Incognito mode ####
+Users can clear browsing data from the application settings or clear all local application data from Android TV system settings. Uninstalling the app removes its private application data; files saved into shared Downloads storage may remain.
 
-The application offers an **incognito** (or similar) mode that provides a **temporary, isolated space** for **local site data** (such as cookies and storage used by websites while that mode is active). That local data is intended to be **removed when you leave incognito mode**.
+## Changes and questions
 
-**Incognito mode does not guarantee anonymity or privacy.** It does not hide your activity from websites, your network operator, or other parties that may observe traffic. It is not a substitute for careful behavior on the web.
-
-#### Children ####
-
-The application does not knowingly collect personal information from children. Parents and guardians should supervise minors’ use of any web browser.
-
-#### Changes to this policy ####
-
-We may update this policy from time to time. The **“Last updated”** date at the top will change when we do. Continued use of the application after changes means you accept the revised policy.
-
-#### Contact ####
-
-For privacy-related questions about this project, you may reach the author via the contact options linked from the official project page:  
-https://github.com/truefedex/tv-bro
-
----
-
-*This document is provided for transparency. It is not legal advice.*
+Policy changes are published in the repository history. Questions and security reports can be opened through the repository issue tracker without including private browsing data.
