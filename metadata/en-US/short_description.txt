@@ -1,1 +1,1 @@
-Simple web browser optimized to use with TV remote
+Remote-first web browser for Android TV and Google TV

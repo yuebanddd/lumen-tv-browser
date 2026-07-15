@@ -1,4 +1,4 @@
-console.log("TV Bro home content extension loaded");
+console.log("Lumen TV Browser home content extension loaded");
 
 const homeExtPort = browser.runtime.connectNative("tvbro");
 function postMessageToHomePagePort(action, data) {

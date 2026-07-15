@@ -7,9 +7,9 @@ android {
     namespace = "com.phlox.tvwebbrowser"
 
     defaultConfig {
-        applicationId = "com.phlox.tvwebbrowser"
-        versionCode = 69
-        versionName = "2.1.6"
+        applicationId = "com.deeplumen.lumentvbrowser"
+        versionCode = 1
+        versionName = "0.1.0"
 
         javaCompileOptions {
             annotationProcessorOptions {
@@ -60,7 +60,9 @@ android {
     productFlavors {
         create("generic") {
             dimension = "appstore"
-            buildConfigField("Boolean", "BUILT_IN_AUTO_UPDATE", "true")
+            // Lumen releases are published independently from upstream TV Bro.
+            // Keep self-update disabled until this fork has its own signed release channel.
+            buildConfigField("Boolean", "BUILT_IN_AUTO_UPDATE", "false")
         }
         create("google") {
             dimension = "appstore"

@@ -31,11 +31,13 @@ class VersionSettingsView @JvmOverloads constructor(
 ) : ScrollView(context, attrs, defStyleAttr) {
 
     companion object {
+        private const val URL_PROJECT = "https://github.com/yuebanddd/lumen-tv-browser"
+        private const val URL_UPSTREAM = "https://github.com/truefedex/tv-bro"
         private const val URL_SUPPORT_AUTHOR = "https://donatello.to/truefedex"
         private const val URL_LICENSE =
-            "https://raw.githubusercontent.com/truefedex/tv-bro/refs/heads/master/LICENSE.md"
+            "https://raw.githubusercontent.com/yuebanddd/lumen-tv-browser/refs/heads/master/LICENSE.md"
         private const val URL_PRIVACY_POLICY =
-            "https://raw.githubusercontent.com/truefedex/tv-bro/refs/heads/master/PRIVACY.md"
+            "https://raw.githubusercontent.com/yuebanddd/lumen-tv-browser/refs/heads/master/PRIVACY.md"
     }
     private var vb = ViewSettingsVersionBinding.inflate(LayoutInflater.from(getContext()), this, true)
     var config = AppContext.provideConfig()
@@ -59,10 +61,18 @@ class VersionSettingsView @JvmOverloads constructor(
         val engineVersion = "Engine: " + WebEngineFactory.getWebEngineVersionString()
         vb.tvWebViewVersion.text = engineVersion
 
-        vb.tvLink.text = Html.fromHtml("<p><u>https://github.com/truefedex/tv-bro</u></p>",
+        vb.tvLink.text = Html.fromHtml("<p><u>$URL_PROJECT</u></p>",
             Html.FROM_HTML_MODE_LEGACY)
         vb.tvLink.setOnClickListener {
-            loadUrl(vb.tvLink.text.toString())
+            loadUrl(URL_PROJECT)
+        }
+
+        vb.tvUpstreamNotice.text = Html.fromHtml(
+            context.getString(R.string.upstream_source_notice_html),
+            Html.FROM_HTML_MODE_LEGACY
+        )
+        vb.tvUpstreamNotice.setOnClickListener {
+            loadUrl(URL_UPSTREAM)
         }
 
         vb.tvSupportAuthor.text = context.getString(R.string.support_the_author)
@@ -78,10 +88,6 @@ class VersionSettingsView @JvmOverloads constructor(
         vb.tvPrivacy.text = context.getString(R.string.privacy_policy)
         vb.tvPrivacy.setOnClickListener {
             loadUrl(URL_PRIVACY_POLICY)
-        }
-
-        vb.tvUkraine.setOnClickListener {
-            loadUrl("https://tv-bro-3546c.web.app/msg001.html")
         }
 
         if (BuildConfig.BUILT_IN_AUTO_UPDATE) {

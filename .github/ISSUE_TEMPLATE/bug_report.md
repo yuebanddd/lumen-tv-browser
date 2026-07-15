@@ -3,7 +3,7 @@ name: Bug report
 about: Create a report to help us improve
 title: ''
 labels: bug
-assignees: truefedex
+assignees: ''
 
 ---
 
@@ -26,7 +26,7 @@ If applicable, add screenshots to help explain your problem.
 **Environment (please complete the following information):**
  - OS version: [e.g. Android TV 10]
  - Device [e.g. NVidia Shield Pro 2015]
- - TV Bro version [e.g. v1.8.1]
+ - Lumen TV Browser version [e.g. v0.1.0]
  - URL or domain name where problem can be reproduced [optional, e.g. https://google.com]
 
 **Additional context**
